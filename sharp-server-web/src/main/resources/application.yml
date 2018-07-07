@@ -1,0 +1,20 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: sharp-server-web
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+
+dubbo:
+  scan:
+    base-packages: com.yodean.web.admin
+  application:
+    id: sharp-server-web
+    name: sharp-server-web
+  registry:
+    id: zookeeper
+    address: zookeeper://127.0.0.1:2181?backup=127.0.0.1:2182,127.0.0.1:2183
